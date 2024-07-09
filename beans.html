@@ -1,0 +1,140 @@
+<html>
+
+<body>
+    <center>
+        <h1>Coffee House</h1>
+    </center>
+
+    <a href="coffeenav.html"></a>
+    <link rel="stylesheet" href="drink.css">
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <center>
+
+        <nav>
+            <pre>        <a href="first page.html">Home</a>      <a href="drink.html">Coffee Drinks</a>          <a href="beans1.html">Beans</a>         <a href="acce.html">Accessories</a>       <a href="paymentcoffee.html">Payment</a>         <a href="cart.html">Cart</a>   </pre>
+
+
+
+        </nav>
+
+        <div class="marquee">
+
+            <marquee behavior="alternate" direction="" width="100%">"Awaken your senses with the aroma of freshly roasted coffee beans."</marquee>
+            </div>
+          
+
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="cart.js"></script>
+
+
+
+        <!--featured categories-->
+
+        <div class="row">
+            <div id="products">
+
+                <!--<div class="column">-->
+                <div class="product">
+                    <img src="tributeblend.jpg" width="200px" height="200px">
+                    <h4>tribute blend</h4>
+                    <p>Rs 200</p>
+                    <!---- <input type="button" value="Add to cart" class="cartbtn">-->
+                    <button class="cartbtn" onclick="addToCart('tribute blend', 200)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="expressoroast.jpg" width="200px" height="200px">
+                    <h4>expresso roast</h4>
+                    <p>Rs 250</p>
+                    <!--<input type="button" value="Add to cart" class="cartbtn">-->
+                    <button class="cartbtn" onclick="addToCart('expresso roast', 250)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="kenya.jpg" width="200px" height="200px">
+                    <h4>kenya</h4>
+                    <p>Rs 190</p>
+                    <!-- <input type="button" value="Add to cart" class="cartbtn">-->
+                    <button class="cartbtn" onclick="addToCart('kenya', 190)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="indiablend.jpg" width="200px" height="200px">
+                    <h4>india blend</h4>
+                    <p>Rs 250</p>
+                    <!--- <input type="button" value="Add to cart" class="cartbtn">-->
+                    <button class="cartbtn" onclick="addToCart('India blend', 250)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="italianroast.jpg" width="200px" height="200px">
+                    <h4>Italian roast</h4>
+                    <p>Rs 250</p>
+                    <!---- <input type="button" value="Add to cart" class="cartbtn">-->
+                    <button class="cartbtn" onclick="addToCart('Italian roast', 250)">Add to Cart</button>
+                </div>
+                <div class="product ">
+                    <img src="sumatra.jpg" width="200px" height="200px">
+                    <h4>Sumatra</h4>
+                    <p>Rs 170</p>
+                    <!--<input type="button" value="Add to cart" class="cartbtn">-->
+                    <button class="cartbtn" onclick="addToCart('Sumatra', 170)">Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
+        <h2>Your Cart</h2>
+        <fieldset>
+            <div id="cart">
+                <ul id="cart-items"></ul>
+                <p>Total: Rs <span id="cart-total"> 0 </span></p>
+            </div>
+            <a href="paymentcoffee.html"><button>Pay now</button></a>
+        </fieldset>
+
+        <script>
+            const cartItems = {};
+            const cartTotalElement = document.getElementById("cart-total");
+            const cartItemsElement = document.getElementById("cart-items");
+
+            function addToCart(itemName, price) {
+                if (cartItems[itemName]) {
+                    cartItems[itemName].quantity++;
+                } else {
+                    cartItems[itemName] = { quantity: 1, price: price };
+                }
+                updateCart();
+            }
+
+            function updateCart() {
+                cartItemsElement.innerHTML = "";
+                let total = 0;
+                for (const itemName in cartItems) {
+                    const { quantity, price } = cartItems[itemName];
+                    total += quantity * price;
+                    const cartItemElement = document.createElement("li");
+                    cartItemElement.textContent = `${itemName} -  Quantity: ${quantity} -  Price:   Rs${quantity * price}`;
+                    cartItemsElement.appendChild(cartItemElement);
+                }
+                cartTotalElement.textContent = total.toFixed(2);
+            }
+        </script>
+</body>
+</form>
+
+</html>
+
+
+<!---- </body>
+        </form>
+        </html>
+        
+            
+            
+             
+           
+            
+    </body>
+</html>-->

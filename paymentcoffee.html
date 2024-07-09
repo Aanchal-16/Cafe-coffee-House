@@ -1,0 +1,56 @@
+<html>
+    <body>
+        <form  action="payment.php" method="POST"></form>
+        <link rel="stylesheet" href="paymentcoffee.css">
+        <center>
+            <h1>Coffee House</h1>
+            <h2>Address details</h2>
+            <div class="add">
+            <input type="text" placeholder="name" name="name">
+            <p></p>
+            <input type="text" placeholder="building no,floor" name="floor">
+            <p></p>
+            <input type="text" placeholder="street ,landmark" name="land">
+            <p></p>
+            <input type="number" placeholder="phone number" name="phno">
+            <p></p>
+            <input type="email" placeholder="emailid" name="mail">
+            <p></p>
+            </div>
+            <h2>Payment method</h2>
+            <input type="radio" name="pay" value="card">card
+            <p></p>
+            <input type="radio" name="pay" value="cash">cash
+            <p></p>
+            <input type="radio" name="pay" value="UPI">UPI
+            <p></p>
+        <h2>Payment</h2>
+        <h3>Enter your card details here</h3>
+        <div class="pay">
+        <input type="text" name="cardholder" id="" placeholder="cardholders name">
+        <p></p>
+        <input type="email" name="email" id="" placeholder="emailid">
+        <p></p>
+        <input type="number" name="cno" id="" placeholder="cardnumber">
+        <p></p>
+        <input type="number" name="cvv" placeholder="cvv">
+        <p></p>
+        <input type="number" name="id" id="" placeholder="valid from">
+        <p></p>
+        
+        <input type="number" placeholder="expiry">
+        <p></p>
+       
+        <h2>UPI details</h2>
+        <input type="text" name="id" id="" placeholder="UPI ID">
+
+      <p></p>  
+      </div>
+        <!--<a href="lastpg.html"><input type="button" class="button" value="PAYNOW"></a>-->
+        <a href="lastpg.html" >
+            <input type="submit" name="submit" value="Paynow" ></a>
+        
+        </center>
+        
+    </body>
+</html>

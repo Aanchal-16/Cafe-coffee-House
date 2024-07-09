@@ -1,0 +1,101 @@
+<html>
+    <body>
+        <center><h1>Coffee House</h1></center>
+        
+        <a href="coffeenav.html"></a>
+        <link rel="stylesheet" href="acce.css">
+
+        <center>
+               
+            <nav>
+                <pre>        <a href="coffeenav.html">Home</a>      <a href="drink.html">Coffee Drinks</a>          <a href="beans.html">Beans</a>         <a href="acce.html">Accessories</a>         <a href="paymentcoffee.html">Payment</a>             </pre>
+            
+        
+            </nav>
+            <!--featured categories-->
+            <div class="row">
+                <div id="products">
+            
+                    <div class="product">
+                        <img src="coffeemaker.jpg"  width="200px" height="200px" >
+                        <h4>Coffee maker</h4>
+                        <p>Rs 2000</p>
+                       <!--- <input type="button" value="Add to cart" class="cartbtn">-->
+                       <button class="cartbtn" onclick="addToCart('Coffee Maker', 2000)">Add to Cart</button>
+                        </div>
+                    
+                
+                
+    
+                    <div class="product">
+                        <img src="saucer barista.jpg"  width="200px" height="200px">
+                        <h4>Saucer Barista</h4>
+                        <p>Rs 600</p>
+                        <!--<input type="button" value="Add to cart" class="cartbtn">-->
+                        <button class="cartbtn" onclick="addToCart('Saucer Barista', 600)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product">
+                        <img src="coffeesipper.jpg"  width="200px" height="200px"> 
+                        <h4>sipper</h4>
+                        <p>Rs 300</p>
+                       <!---- <input type="button" value="Add to cart" class="cartbtn">-->
+                       <button class="cartbtn" onclick="addToCart('Sipper', 300)">Add to Cart</button>
+                    </div>
+                    </div>
+                    
+                    
+
+                </div>
+                <h2>Your Cart</h2>
+                <fieldset>
+                <div id="cart">
+                    <ul id="cart-items"></ul>
+                    <p>Total:   Rs<span id="cart-total">      0      </span></p>
+                </div>
+                <a href="paymentcoffee.html"><button>Pay now</button></a>
+                </fieldset>
+            
+                <script>
+                    const cartItems = {};
+                    const cartTotalElement = document.getElementById("cart-total");
+                    const cartItemsElement = document.getElementById("cart-items");
+            
+                    function addToCart(itemName, price) {
+                        if (cartItems[itemName]) {
+                            cartItems[itemName].quantity++;
+                        } else {
+                            cartItems[itemName] = { quantity: 1, price: price };
+                        }
+                        updateCart();
+                    }
+            
+                    function updateCart() {
+                        cartItemsElement.innerHTML = "";
+                        let total = 0;
+                        for (const itemName in cartItems) {
+                            const { quantity, price } = cartItems[itemName];
+                            total += quantity * price;
+                            const cartItemElement = document.createElement("li");
+                            cartItemElement.textContent = `${itemName} -  Quantity: ${quantity} -  Price:   Rs${quantity * price}`;
+                            cartItemsElement.appendChild(cartItemElement);
+                        }
+                        cartTotalElement.textContent = total.toFixed(2);
+                    }
+                </script>
+            </body>
+        </form>
+            </html>
+            
+                
+            </body>
+        </form>
+        </html>
+        
+            
+            
+             
+           
+            
+    </body>
+</html>

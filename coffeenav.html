@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:aliceblue;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        nav {
+            background-color: #5B412A;;
+            overflow: hidden;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 20px;
+            font-family: candara;
+            padding: 50px;
+            color: #fcf6f6;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .marquee {
+            margin: 20px 0;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .slider {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .menu-photo {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .menu-photo img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .menu-photo h2{
+            text-align: center;
+            font-family: 'Candara';
+            font-size: 35px;
+            background-color: burlywood;
+            margin: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Coffee House</h1>
+    </div>
+
+    <nav>
+        <a href="first-page.html">Home</a>
+        <a href="drink.html">Coffee Drinks</a>
+        <a href="beans.html">Beans</a>
+        <a href="acce.html">Accessories</a>
+        <a href="coffeelogin.html">Login</a>
+    </nav>
+
+    <div class="marquee">
+        <marquee behavior="alternate" width="100%">Welcome to Coffee House.</marquee>
+    </div>
+
+    <div class="slider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="coffeequote1.webp" alt="Coffee Quote 1"></div>
+                <div class="swiper-slide"><img src="finalc2.jpg" alt="Final Coffee 2"></div>
+                <div class="swiper-slide"><img src="slider4.jpg" alt="Slider 4"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <div class="menu-photo">
+        <h2>Choose coffee that's perfect for you</h2>
+        <img src="menu.jpg" alt="Menu">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

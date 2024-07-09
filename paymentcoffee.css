@@ -1,0 +1,60 @@
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    background: #6F4E37;
+    color: #f0f2f0;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+  
+  
+  }
+  .select{
+    text-decoration: none;
+    display: inline-block;
+   
+    padding: 8px 30px;
+    margin: 30px 0;
+    
+    
+  
+  }
+  .add input{
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+    
+  }
+
+  .pay input{
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+
+  }
+  .button{
+    text-decoration: none;
+    display: inline-block;
+    background: #080401;
+    color: #f0f2f0;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+  
+
+  }
+  *{
+    background-color:  #cdcec8;
+    
+
+
+    
+  }
+  h2{
+    color: #f0f2f0;
+    background-color:  #0b0601;
+    height: 40px;
+    padding-top: 10px;
+   
+  }
+ 
